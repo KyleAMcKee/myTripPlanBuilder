@@ -76,7 +76,7 @@ class Trips extends Component {
                   {trip.title} - {trip.summary}
                   <button onClick={() => this.onClickDelete(trip.id)}>Remove Trip</button>
                   <button onClick={() => this.onClickEdit(trip.id)}>Edit trip</button>
-                  {(this.state.edit === trip.id && this.state.on === 0) && <div>
+                  {(this.state.edit === trip.id) && <div>
                     <input type="text" name="title" value={trip.title}/>
                     <input type="text" name="summary" value={trip.summary}/>
                     </div>}
