@@ -12,13 +12,13 @@ On the client you are able to add trips and delete trips, as well as delete days
 
 For the back-end the following routes are available:
 
--Create trip: `/trip-plan/new`
--Retrieve trip: `/trip-plans/:tripId`
--Update trip: `/trip-plans/:tripId/edit`
--Delete trip: `/trip-plans/:tripId`
--List all trips: `/trip-plans`
+- Create trip: `/trip-plan/new`
+- Retrieve trip: `/trip-plans/:tripId`
+- Update trip: `/trip-plans/:tripId/edit`
+- Delete trip: `/trip-plans/:tripId`
+- List all trips: `/trip-plans`
 
--Create day: `/trip-plans/:tripId/days`
--Update day: `/trip-plans/:tripId/days/:dayId`
+- Create day: `/trip-plans/:tripId/days`
+- Update day: `/trip-plans/:tripId/days/:dayId`
 
 The back-end was created using Node and Express while the front-end is made using React. The database is PostgreSQL hosted on ElephantSQL.
