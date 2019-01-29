@@ -7,7 +7,8 @@ class Trips extends Component {
       this.state = {
         trips: [],
         title: '',
-        summary: ''
+        summary: '',
+        edit: 0
       }
       this.changeHandler = this.changeHandler.bind(this);
   }
@@ -61,7 +62,9 @@ class Trips extends Component {
   }
 
   onClickEdit(id) {
-    console.log(id);
+    this.setState({
+      edit: id
+    });
   }
 
   render() {
@@ -70,13 +73,18 @@ class Trips extends Component {
         <ul>
             {this.state.trips.map(trip =>
                 <li key={trip.id}>
-                  {trip.title} {trip.summary}
-                  <button onClick={() => this.onClickEdit(trip.id)}>Edit trip</button>
+                  {trip.title} - {trip.summary}
                   <button onClick={() => this.onClickDelete(trip.id)}>Remove Trip</button>
+                  <button onClick={() => this.onClickEdit(trip.id)}>Edit trip</button>
+                  {(this.state.edit === trip.id && this.state.on === 0) && <div>
+                    <input type="text" name="title" value={trip.title}/>
+                    <input type="text" name="summary" value={trip.summary}/>
+                    </div>}
                   <ul>
                     {trip.days.map(day =>
                     <li key={day.id}>
-                      {day.title} {day.description}
+                      {day.title} - {day.description}
+                      <button>Remove Day</button>
                     </li>
                     )}
                   </ul>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Trips from './components/trips/trips';
-import NewTrip from './components/newTrip/newTrip';
 
 class App extends Component {
   render() {
@@ -11,7 +10,6 @@ class App extends Component {
           Available trips
         </header>
         <Trips />
-        {/* <NewTrip /> */}
       </div>
     );
   }
